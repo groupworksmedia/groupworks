@@ -5,9 +5,11 @@ plugins:
 
 gem "github-pages", group: :jekyll_plugins
 
-title: "The title of your site"
+title: Flavour - Find Your Flavour
 
-description: "A short description of your site's purpose"
+description: Support our vertically integrated bespoke high-tech knitting company and experience the future of fashion.
+
+theme: minimal
 
 show_downloads: true
 
