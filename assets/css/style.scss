@@ -2,3 +2,53 @@
 ---
 
 @import "{{ site.theme }}";
+
+$primary-color: black;
+$text-color: white;
+
+body {
+    background-color: $primary-color;
+    color: $text-color;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: $text-color;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+}
+
+#hero {
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background: $text-color;
+    color: $primary-color;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+}
