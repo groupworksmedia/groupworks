@@ -11,3 +11,4 @@ Our team is dedicated to pushing the boundaries of what's possible in the world 
 
 Meet our founders:
 - Michael Kir
+![Alt Text]({{ '/assets/images/MichaelKir.jpg' | relative_url }})
