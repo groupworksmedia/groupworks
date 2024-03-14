@@ -10,6 +10,4 @@ Flavour was founded by a team of passionate entrepreneurs, designers, and engine
 Our team is dedicated to pushing the boundaries of what's possible in the world of knitting. We're constantly experimenting with new materials, techniques, and designs to create garments that are not only beautiful but also functional and sustainable.
 
 Meet our founders:
-- Sarah Thompson (CEO)
-- Michael Chen (CTO)
-- Emily Nakamura (Creative Director)
+- Michael Kir
