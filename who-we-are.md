@@ -21,7 +21,7 @@ Throughout his career, Michael has gained valuable experience in various roles, 
   - Improved competency in conducting thorough data-driven investigations in financial fraud, applying forensic accounting techniques, streamlining audit processes for efficiency, and developing robust data-informed risk management systems.
 
 <div class="founder">
-    ![Michael Kir]({{ '/assets/images/MichaelKir.jpg' | relative_url }}){: .founder-image}
+    ![Michael Kir]({{ '/assets/images/MichaelKir.jpeg' | relative_url }}){: .founder-image}
     ## Michael Kir (Founder and CEO)
 </div>
 
