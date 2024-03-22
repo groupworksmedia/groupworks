@@ -1,17 +1,17 @@
-let prevScrollPos = window.pageYOffset;
-
 window.onscroll = function() {
-  const currentScrollPos = window.pageYOffset;
   const header = document.querySelector('header');
   const footer = document.querySelector('footer');
+  const scrollPosition = window.pageYOffset;
 
-  if (prevScrollPos > currentScrollPos) {
-    header.style.top = '0';
-    footer.style.bottom = '0';
-  } else {
+  if (scrollPosition > header.offsetHeight) {
     header.style.top = '-100px';
-    footer.style.bottom = '-100px';
+  } else {
+    header.style.top = '0';
   }
 
-  prevScrollPos = currentScrollPos;
+  if (scrollPosition < document.body.offsetHeight - window.innerHeight - footer.offsetHeight) {
+    footer.style.bottom = '0';
+  } else {
+    footer.style.bottom = '-100px';
+  }
 }
