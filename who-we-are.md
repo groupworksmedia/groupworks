@@ -20,10 +20,9 @@ Throughout his career, Michael has gained valuable experience in various roles, 
 - Forensic & Compliance Trainee at KPMG (May 2021 - Aug 2021)
   - Improved competency in conducting thorough data-driven investigations in financial fraud, applying forensic accounting techniques, streamlining audit processes for efficiency, and developing robust data-informed risk management systems.
 
-<div class="founder">
+
     ![Michael Kir]({{ '/assets/images/MichaelKir.jpeg' | relative_url }}){: .founder-image}
     ## Michael Kir (Founder and CEO)
-</div>
 
 Michael's diverse skill set, including expertise in corporate finance, accounting, and data analysis, has been instrumental in shaping Flavour's innovative approach to bespoke high-tech knitting. His commitment to excellence, attention to detail, and strategic thinking have positioned Flavour as a pioneer in the industry.
 
