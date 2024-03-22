@@ -8,9 +8,9 @@ title: Contact
 We'd love to hear from you! Whether you have a question about our products, want to share feedback, or are interested in partnering with us, please don't hesitate to reach out.
 
 You can contact us via:
-- Email: info@flavour.boutique
-- Phone: +1 (123) 456-7890
-- Address: 123 Main Street, Anytown, USA
+- Email: michael.kir@flavour.boutique
+- Phone: +447787181862
+- Address: Battersea Power Station, London, UK
 
 Follow us on social media:
 - [Facebook](https://www.facebook.com/flavour)
