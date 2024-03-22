@@ -52,7 +52,18 @@ footer {
     text-align: center;
     padding: 1rem;
 }
-
+.founder-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  @media screen and (min-width: 768px) {
+    .founder-image {
+      max-width: 200px;
+    }
+  }
 .founder {
     text-align: center;
     margin-bottom: 2rem;
