@@ -14,8 +14,7 @@ body {
 }
 
 header {
-    background-color: #333;
-    padding: 2rem 0;
+    padding: 4rem 0;
     // or
     // margin-bottom: 2rem;
   }
@@ -26,7 +25,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 1.5rem;
+    margin-right: 2rem;
 }
 
 nav ul li a {
@@ -53,7 +52,7 @@ section {
 
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 4rem;
 }
 .founder-image {
     width: 100%;
