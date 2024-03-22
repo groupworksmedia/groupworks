@@ -67,3 +67,6 @@ footer {
       max-width: 200px;
     }
   }
+  header, footer {
+    transition: top 0.3s, bottom 0.3s;
+  }
