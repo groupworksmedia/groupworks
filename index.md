@@ -6,8 +6,8 @@ This is a demonstration of using AR Quick Look in a markdown file. AR Quick Look
 
 Check out this incredible 3D model of a robot:
 
-<model-viewer src="path/to/your/robot_model.usdz" ios-src="path/to/your/robot_model.usdz" alt="Robot 3D Model" auto-rotate camera-controls ar>
-</model-viewer>
+<model src="path/sneaker_airforce.usdz" alt="Nike Airforce 3D Model" auto-rotate camera-controls ar>
+</model>
 
 To view the AR experience:
 - On iOS devices: Tap on the model to open it in AR Quick Look.
