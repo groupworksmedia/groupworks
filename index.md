@@ -5,11 +5,7 @@ This is a demonstration of using AR Quick Look in a markdown file. AR Quick Look
 ## 3D Model Example
 
 Check out this incredible 3D model of a Nike Airfoce:
-<model class = "model" src="sneaker_airforce.usdz" alt="3D Model" auto-rotate camera-controls ar>
-    <div class="controls">
-      <button slot="ar-button">View in AR</button>
-    </div>
-  </model>
+<model class = "model" src="sneaker_airforce.usdz" alt="3D Model" auto-rotate camera-controls ar> </model>
 <a href="sneaker_airforce.usdz" rel="ar">
   View in AR
 </a>
