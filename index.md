@@ -4,8 +4,20 @@ This is a demonstration of using AR Quick Look in a markdown file. AR Quick Look
 
 ## 3D Model Example
 
-Check out this incredible 3D model of a robot:
+Check out this incredible 3D model of a Nike Airfoce:
+<style>
+.model {
+  width: 50vw;
+  height: 50vw;
+  animation: 5s spin linear infinite;
+}
 
+@keyframes spin {
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+<style>
 <model src="path/sneaker_airforce.usdz" alt="Nike Airforce 3D Model" auto-rotate camera-controls ar>
 </model>
 
