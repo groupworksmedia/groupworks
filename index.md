@@ -5,7 +5,7 @@ This is a demonstration of using AR Quick Look in a markdown file. AR Quick Look
 ## 3D Model Example
 
 Check out this incredible 3D model of a Nike Airfoce:
-<a href="path/sneaker_airforce.usdz" rel="ar">
+<a href="sneaker_airforce.usdz" rel="ar">
   View in AR
 </a>
 To view the AR experience:
