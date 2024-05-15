@@ -5,6 +5,7 @@ This is a demonstration of using AR Quick Look in a markdown file. AR Quick Look
 ## 3D Model Example
 
 Check out this incredible 3D model of a Nike Airfoce:
+<html> 
 <style>
 .model {
   width: 50vw;
@@ -20,7 +21,7 @@ Check out this incredible 3D model of a Nike Airfoce:
 <style>
 <model src="path/sneaker_airforce.usdz" alt="Nike Airforce 3D Model" auto-rotate camera-controls ar>
 </model>
-
+</html>
 To view the AR experience:
 - On iOS devices: Tap on the model to open it in AR Quick Look.
 - On supported web browsers: Click on the model and look for the AR icon to enter AR mode.
