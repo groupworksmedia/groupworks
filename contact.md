@@ -17,4 +17,4 @@ Follow us on social media:
 
 Follow our projects to stay up-to-date on what we have been doing outside of the blog:
 
-[Our Other Projects]({{ '/projects.md' | relative_url }})
+[Our Other Projects]('/projects.md')
