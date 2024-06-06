@@ -5,7 +5,7 @@ title: Who We Are
 
 # Who We Are
 
-Flavour was founded by Michael Kir, a passionate entrepreneur and experienced corporate finance advisor with a vision to revolutionize the fashion industry. With a background in accounting, forensic investigations, and financial management, Michael brings a unique perspective to the world of bespoke high-tech knitting.
+Flavournomics was founded by Michael Kir, a passionate entrepreneur.
 
 Michael's journey began with earning a First Class Honours degree in BSc Accounting from the University of Westminster. He further enhanced his skills by completing the ACCA Strategic Professional Level and becoming an Associate of the Chartered Institute for Securities & Investment (ACSI) with a Corporate Finance Certificate.
 
@@ -22,8 +22,4 @@ Throughout his career, Michael has gained valuable experience in various roles, 
 
 
 ![Michael Kir]({{ '/assets/images/MichaelKir.jpeg' | relative_url }}){: .founder-image}
-Michael Kir (Founder and CEO)
-
-Michael's diverse skill set, including expertise in corporate finance, accounting, and data analysis, has been instrumental in shaping Flavour's innovative approach to bespoke high-tech knitting. His commitment to excellence, attention to detail, and strategic thinking have positioned Flavour as a pioneer in the industry.
-
-Under Michael's leadership, Flavour is poised to disrupt the fashion industry by combining cutting-edge technology with personalized design and sustainable practices. Join Michael on this exciting journey as Flavour continues to grow and revolutionize the way we think about clothing.
+Michael Kir (Founder)
