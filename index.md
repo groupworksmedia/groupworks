@@ -1,14 +1,6 @@
-# Explore different Flavours
-Explore different combinations of knit wear using Augmented Reality.
-This concept tries to showcase what the configurator would feel like.
-## 3D Model Example
+# Welcome to Flavournomics!
+This is my blog, where I share my thoughts and storties worth telling that others are worth highlighting and spreading
+## What is Flavournomics?
+Despite the fact that, flavournomics contains flavour it has nothing to do with food and beverage. Rather, flavournomics refers to the relationship between individual perspectives how that shapes the society. It is all about perspective. That's how important preferences are, people make decisions based on them and yet they evolve throughout once life journey.
 
-Check out this incredible 3D model of a Nike Airfoce:
-<model src="sneaker_airforce.usdz"></model>
-<a href="sneaker_airforce.usdz" rel="ar">
-  View in AR
-</a>
-To view the AR experience:
-- On iOS devices: Tap on the model to open it in AR Quick Look.
-- On supported web browsers: Click on the model and look for the AR icon to enter AR mode.
-
+One of the key themes of this blog will always be to answer the question what is the objective of the subject and consequently how does that impact our perspectives on the issue. 
