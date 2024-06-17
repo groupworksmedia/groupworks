@@ -9,11 +9,11 @@ sass:
 
 gem "github-pages", group: :jekyll_plugins
 
-title: Flavour - Find Your Flavour
+title: Flavournomics - Find Your Flavour of economics
 
-description: Support our vertically integrated bespoke high-tech knitting company and experience the future of fashion.
+description: My personal Blog
 
 collections:
   blog:
     output: true
-    permalink: blog/:title/
+    permalink: /blog/:title/
