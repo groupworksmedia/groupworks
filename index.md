@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Welcome to Flavournomics!
 This is my blog, where I share my thoughts and storties worth highlighting and spreading.
 ## What is Flavournomics?
