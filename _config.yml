@@ -13,3 +13,7 @@ title: Flavour - Find Your Flavour
 
 description: Support our vertically integrated bespoke high-tech knitting company and experience the future of fashion.
 
+collections:
+  blog:
+    output: true
+    permalink: blog/:title/
