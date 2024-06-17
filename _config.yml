@@ -12,8 +12,3 @@ gem "github-pages", group: :jekyll_plugins
 title: Flavournomics - Find Your Flavour of economics
 
 description: My personal Blog
-
-collections:
-  blog:
-    output: true
-    permalink: /blog/:title/

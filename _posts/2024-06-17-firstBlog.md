@@ -1,5 +1,6 @@
 ---
 layout: post
+author: Michael
 title: "My First Blog Post"
 date: 2024-06-17
 ---
