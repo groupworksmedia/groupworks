@@ -7,7 +7,11 @@
 
 $primary-color: black;
 $text-color: white;
+$heading-color: lightgrey;
 
+h1, h2, h3, h4, h5, h6 {
+  color: $heading-color;
+}
 body {
   background-color: $primary-color;
   color: $text-color;
