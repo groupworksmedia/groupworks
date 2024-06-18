@@ -1,22 +1,17 @@
 ---
 layout: default
-title: Crowdfunding Campaign
+title: Projects
 ---
 
-# Flavour Boutique Crowdfunding Campaign
+# Flavour 
 
-We're excited to launch our crowdfunding campaign to bring Flavour to life. By supporting our campaign, you will be buying the one of one knitted garments and join the push to bring high tech technologies to the bespoke market with onsite design and manufacture under one roof within central London.
-Your contributions will help us:
+I am working to bring project Flavour to life. I work towards bringing high tech technologies to the bespoke market with onsite design and manufacture under one roof within central London. Technology allows us to bring clothing that is unique and one of one. This is a much more personal approach.
+
+I am working to:
 - Create state-of-the-art knitting machines
-- Develop our custom sizing and design software
+- Develop our custom sizing and design software using Swift frameworks and embed machine learning throughout.
 - Source high-quality knit
 
-In return for your support, we're offering a range of exclusive rewards, including:
-- Early access to our products
-- Bespoke-designed garments
-- Behind-the-scenes factory tours
-- And more!
+If you can help with any of these please get in touch!
 
-Check out our rewards section for more details and to find the perfect package for you.
-
-Check out the website at [Flavour Boutique](https://flavour.boutique)
+The website [Flavour Boutique](https://flavour.boutique) is currently being built through Swift on the Server frameworks and **unavailable**. I will update you when it is publicly available.
