@@ -3,9 +3,8 @@ layout: default
 title: Contact
 ---
 
-## Contact Me 
-![Michael Kir]({{ '/assets/images/MichaelKir.jpeg' | relative_url }}){: .founder-image}
-Michael Kir
+## Contact Me
+### Michael Kir
 
 I'd love to hear from you! Whether you have a question about my blog posts, want to share feedback, or are interested in what other stuff I am working on, please don't hesitate to reach out.
 
@@ -18,6 +17,7 @@ Follow me on social media:
 [Instagram](https://www.instagram.com/flavournomics) | [Linkedin](https://www.linkedin.com/in/flavournomics/)
 
 ## Contributors
+### Max Scott-Hayes
 Max Scott-Hayes has a background in political science with interests ranging from finance to technology.
 
 You can contact Max via:
