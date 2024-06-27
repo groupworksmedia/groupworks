@@ -1,11 +1,12 @@
 ---
 layout: default
+title: Homepage
 ---
 
 
 If this is your first time visiting my blog, here I share my unique thoughts on topics that I have learnt about.
 
-## Latest Blog Posts
+# Latest Blog Posts
 
 <ul>
   {% for post in site.posts %}
