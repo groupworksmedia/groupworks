@@ -2,7 +2,7 @@
 layout: default
 title: Projects
 ---
-#Flavourcast
+# Flavourcast
 
 Our new contributor, Max Scott-Hayes, will be joining me to hear what the companies and start ups have to say.
 
