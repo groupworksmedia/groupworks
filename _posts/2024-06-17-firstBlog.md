@@ -1,6 +1,6 @@
 ---
 layout: post
-author: Michael
+author: Michael Kir
 title: "My First Blog Post"
 date: 2024-06-17
 ---
