@@ -5,7 +5,7 @@ title: "Software Soldiers"
 date: 2024-07-03
 ---
 
-## Software Soldiers: The VC-Driven Transformation of Modern Security
+## The VC-Driven Transformation of Modern Security
 
 The future of warfare is being coded in Silicon Valley. As venture capital pours into defence technology startups, a new paradigm is emerging: software-defined warfare. This shift represents a fundamental change in military capability development and deployment, with profound implications for future conflicts.
 
