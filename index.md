@@ -4,7 +4,7 @@ title: Homepage
 ---
 
 
-If this is your first time visiting my blog, here I share my unique thoughts on topics that I have learnt about.
+If this is your first time visiting my blog, here we share our unique thoughts on topics that we have learnt about.
 
 # Latest Blog Posts
 
