@@ -5,15 +5,26 @@ $primary-color: #000000;
 $text-color: #ffffff;
 $heading-color: #d3d3d3;
 $accent-color: #4a90e2;
-$breakpoint-mobile: 600px;
+
+// Breakpoints
+$breakpoint-small-mobile: 320px;
+$breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
+$breakpoint-laptop: 1024px;
+$breakpoint-desktop: 1200px;
+$breakpoint-large-desktop: 1600px;
 
 // Mixins
 @mixin focus-visible {
   &:focus-visible {
     outline: 2px solid $accent-color;
     outline-offset: 2px;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
   }
 }
 
@@ -62,10 +73,14 @@ img {
 // Header styles
 header {
   background-color: rgba($primary-color, 0.9);
-  padding: 1rem;
+  padding: 0.5rem;
   position: sticky;
   top: 0;
   z-index: 100;
+
+  @include respond-to($breakpoint-tablet) {
+    padding: 1rem;
+  }
 }
 
 .menu-container {
@@ -75,7 +90,7 @@ header {
 }
 
 .menu-toggle {
-  display: none;
+  display: block;
   background: none;
   border: none;
   cursor: pointer;
@@ -83,6 +98,10 @@ header {
   color: $text-color;
   font-size: 1rem;
   @include focus-visible;
+
+  @include respond-to($breakpoint-tablet) {
+    display: none;
+  }
 }
 
 .menu-icon {
@@ -106,34 +125,72 @@ header {
   &::after { bottom: -8px; }
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
+nav {
+  display: none;
+  width: 100%;
 
-nav li {
-  margin-right: 1rem;
-
-  &:last-child {
-    margin-right: 0;
+  &.active {
+    display: block;
   }
-}
 
-nav a {
-  color: $text-color;
-  @include focus-visible;
+  @include respond-to($breakpoint-tablet) {
+    display: block;
+    width: auto;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to($breakpoint-tablet) {
+      flex-direction: row;
+    }
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    text-align: center;
+
+    @include respond-to($breakpoint-tablet) {
+      margin-right: 1rem;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  a {
+    color: $text-color;
+    @include focus-visible;
+  }
 }
 
 // Main content styles
 main {
   flex: 1 0 auto;
-  padding: 2rem;
-  max-width: 1200px;
+  padding: 1rem;
+  max-width: 100%;
   margin: 0 auto;
   width: 100%;
-  overflow-y: auto; // Allow main content to scroll if it exceeds viewport height
+  overflow-y: auto;
+
+  @include respond-to($breakpoint-tablet) {
+    padding: 2rem;
+    max-width: 90%;
+  }
+
+  @include respond-to($breakpoint-laptop) {
+    max-width: 80%;
+  }
+
+  @include respond-to($breakpoint-desktop) {
+    max-width: 1200px;
+  }
 }
 
 section {
@@ -163,10 +220,18 @@ section {
 
 .founder-image {
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
   height: auto;
   border-radius: 50%;
   margin-bottom: 1rem;
+
+  @include respond-to($breakpoint-tablet) {
+    max-width: 250px;
+  }
+
+  @include respond-to($breakpoint-laptop) {
+    max-width: 300px;
+  }
 }
 
 // Footer styles
@@ -177,58 +242,41 @@ footer {
   text-align: center;
 }
 
-// Responsive styles
-@media screen and (max-width: $breakpoint-mobile) {
-  html {
-    font-size: 14px;
-  }
+// Responsive typography
+html {
+  font-size: 14px;
 
-  header {
-    padding: 0.5rem;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    width: 100%;
-
-    &.active {
-      display: block;
-    }
-
-    ul {
-      flex-direction: column;
-    }
-
-    li {
-      margin-right: 0;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-  }
-
-  .founder-image {
-    max-width: 200px;
-  }
-}
-
-@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
-  html {
+  @include respond-to($breakpoint-mobile) {
     font-size: 15px;
   }
 
-  .founder-image {
-    max-width: 250px;
+  @include respond-to($breakpoint-tablet) {
+    font-size: 16px;
+  }
+
+  @include respond-to($breakpoint-laptop) {
+    font-size: 17px;
+  }
+
+  @include respond-to($breakpoint-desktop) {
+    font-size: 18px;
   }
 }
 
-@media screen and (min-width: $breakpoint-tablet) {
-  .founder-image {
-    max-width: 300px;
-  }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+@include respond-to($breakpoint-laptop) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.25rem; }
+  h6 { font-size: 1.1rem; }
 }
 
 // High contrast mode
@@ -248,5 +296,22 @@ footer {
   * {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+// Print styles
+@media print {
+  header, footer, .cta-button {
+    display: none;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  main {
+    max-width: 100%;
+    padding: 0;
   }
 }
