@@ -1,7 +1,7 @@
 ---
 ---
 
-{ @import "{{ site.theme }}";
+{ @import "{{ site.theme }}"; }
 
 // Variables
 $primary-color: #000000;
@@ -251,5 +251,4 @@ footer {
     transition: none !important;
     animation: none !important;
   }
-}
 }
