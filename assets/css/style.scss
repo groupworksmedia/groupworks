@@ -3,15 +3,31 @@
 
 @import "{{ site.theme }}";
 
-// Add personal styles below
-
-$primary-color: black;
-$text-color: white;
-$heading-color: lightgrey;
+// Variables
+$primary-color: #000000;
+$text-color: #ffffff;
+$heading-color: #d3d3d3;
+$accent-color: #4a90e2;
 $breakpoint-mobile: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
-h1, h2, h3, h4, h5, h6 {
-  color: $heading-color;
+// Mixins
+@mixin focus-visible {
+  &:focus-visible {
+    outline: 2px solid $accent-color;
+    outline-offset: 2px;
+  }
+}
+
+// Base styles
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -19,23 +35,45 @@ body {
   color: $text-color;
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: $heading-color;
+  margin-top: 0;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+  @include focus-visible;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Header styles
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: transparent;
+  background-color: rgba($primary-color, 0.9);
   padding: 1rem;
-  transition: top 0.3s;
+  position: sticky;
+  top: 0;
   z-index: 100;
-  text-align: center;
 }
 
 .menu-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -45,6 +83,9 @@ header {
   border: none;
   cursor: pointer;
   padding: 10px;
+  color: $text-color;
+  font-size: 1rem;
+  @include focus-visible;
 }
 
 .menu-icon {
@@ -53,7 +94,7 @@ header {
   height: 3px;
   background-color: $text-color;
   position: relative;
-  
+
   &::before,
   &::after {
     content: '';
@@ -68,28 +109,37 @@ header {
   &::after { bottom: -8px; }
 }
 
-header nav ul {
+nav ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  display: flex;
 }
 
-header nav ul li {
-  display: inline-block;
+nav li {
   margin-right: 1rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
-header nav ul li:last-child {
-  margin-right: 0;
-}
-
-header nav ul li a {
+nav a {
   color: $text-color;
-  text-decoration: none;
+  @include focus-visible;
+}
+
+// Main content styles
+main {
+  flex: 1 0 auto;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 section {
-  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 #hero {
@@ -98,11 +148,19 @@ section {
 
 .cta-button {
   display: inline-block;
-  background: $text-color;
+  background: $accent-color;
   color: $primary-color;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
   margin-top: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  @include focus-visible;
+
+  &:hover {
+    background-color: darken($accent-color, 10%);
+    text-decoration: none;
+  }
 }
 
 .founder-image {
@@ -113,44 +171,31 @@ section {
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 768px) {
-  .founder-image {
-    max-width: 200px;
-  }
-}
-
+// Footer styles
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: transparent;
+  background-color: rgba($primary-color, 0.9);
   color: $text-color;
   padding: 1rem;
-  transition: bottom 0.3s;
-  z-index: 100;
   text-align: center;
 }
 
+// Responsive styles
 @media screen and (max-width: $breakpoint-mobile) {
-  header {
-    padding: 0.5rem;
+  html {
+    font-size: 14px;
   }
 
-  .menu-container {
-    flex-direction: column;
-    align-items: flex-end;
+  header {
+    padding: 0.5rem;
   }
 
   .menu-toggle {
     display: block;
   }
 
-  header nav {
+  nav {
     display: none;
     width: 100%;
-    background-color: rgba($primary-color, 0.9);
-    padding: 10px 0;
 
     &.active {
       display: block;
@@ -161,17 +206,49 @@ footer {
     }
 
     li {
-      display: block;
       margin-right: 0;
       margin-bottom: 0.5rem;
       text-align: center;
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    order: 1;
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
+  .founder-image {
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+  html {
+    font-size: 15px;
+  }
+
+  .founder-image {
+    max-width: 250px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+  .founder-image {
+    max-width: 300px;
+  }
+}
+
+// High contrast mode
+@media (prefers-contrast: high) {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  a, .cta-button {
+    color: #ffff00;
+  }
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
   }
 }
