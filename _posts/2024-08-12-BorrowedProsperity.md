@@ -5,7 +5,7 @@ title: "Borrowed Prosperity"
 date: 2024-08-12
 ---
 
-## The Risks and Rewards of the Yen Carry Trade - By Max Scott-Hayes 
+## The Risks and Rewards of the Yen Carry Trade
 
 In August 2024, global financial markets experienced a seismic shock that originated from an unlikely source: a modest interest rate hike by the Bank of Japan. This event brought into sharp focus the outsized influence of the so-called "yen carry trade" on global markets, raising urgent questions about whether the world's financial system has become overly dependent on Japan's monetary policy.
 
