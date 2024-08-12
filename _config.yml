@@ -2,7 +2,8 @@ plugins:
   - jekyll-sass-converter
 
 sass:
-  style: compressed
+sass_dir: _sass
+style: compressed
 
 title: Flavournomics - Find Your Flavour of economics
 

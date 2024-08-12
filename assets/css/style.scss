@@ -1,3 +1,6 @@
+---
+---
+
 // Variables
 $background-color: #000000;
 $text-color: #ffffff;
@@ -34,15 +37,14 @@ $breakpoint-large-desktop: 1600px;
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
+html, body {
+  background-color: $background-color;
+  color: $text-color;
 }
 
 body {
-  background-color: $background-color;
-  color: $text-color;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
@@ -269,6 +271,11 @@ footer {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+// Ensure no other styles are overriding the background
+#root, .app-container, main, .content {
+  background-color: $background-color;
 }
 
 // High contrast mode
