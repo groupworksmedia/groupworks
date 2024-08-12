@@ -298,8 +298,8 @@ footer {
   }
 
   body {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
   }
 
   main {
@@ -307,7 +307,19 @@ footer {
   }
 
   a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: underline;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 1cm;
   }
 }
