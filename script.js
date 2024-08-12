@@ -9,7 +9,7 @@ window.onscroll = function() {
     header.style.top = '0';
   }
 
-  if (scrollPosition < document.body.offsetHeight - window.innerHeight - footer.offsetHeight) {
+  if (scrollPosition + window.innerHeight >= document.body.offsetHeight - footer.offsetHeight) {
     footer.style.bottom = '0';
   } else {
     footer.style.bottom = '-100px';
