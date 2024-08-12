@@ -1,7 +1,4 @@
----
----
-
-@import "{{ site.theme }}"; 
+@import "{{ site.theme }}";
 
 // Variables
 $primary-color: #000000;
@@ -136,6 +133,7 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  overflow-y: auto; // Allow main content to scroll if it exceeds viewport height
 }
 
 section {
