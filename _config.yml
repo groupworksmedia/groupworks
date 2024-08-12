@@ -1,5 +1,4 @@
 plugins:
-  - jekyll-remote-theme
   - jekyll-sass-converter
 
 sass:
