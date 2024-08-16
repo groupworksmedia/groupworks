@@ -88,33 +88,6 @@ a {
   }
 }
 
-// Post layout
-.post-layout {
-  padding: 2rem 0;
-}
-
-.post {
-  background-color: $background-color;
-  border-bottom: 2px solid $border-color; // Increased thickness for visibility
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-
-  &:last-child {
-    border-bottom: none;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-}
-
-.post-meta {
-  font-style: italic;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-}
-
 // Responsive adjustments
 @media (max-width: 600px) {
   .horizontal-menu {
