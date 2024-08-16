@@ -10,11 +10,10 @@ If this is your first time visiting the blog, here we share our unique thoughts 
 
 <div class="newspaper-layout">
   <div class="featured-article">
-    {% for post in site.posts limit:1 %}
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
-      {{ post.excerpt }}
-    {% endfor %}
+    {% assign featured_post = site.posts.first %}
+    <h2><a href="{{ featured_post.url | relative_url }}">{{ featured_post.title }}</a></h2>
+    <p class="post-meta">{{ featured_post.date | date: "%B %-d, %Y" }}</p>
+    {{ featured_post.excerpt }}
   </div>
 
   <div class="column-articles">
