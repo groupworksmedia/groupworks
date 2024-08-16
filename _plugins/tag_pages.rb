@@ -4,17 +4,17 @@ module Jekyll
   
       def generate(site)
         site.tags.each_key do |tag|
-          site.pages << TagPage.new(site, site.source, tag)
+          site.pages << TagPage.new(site, site.source, 'tag', tag)
         end
       end
     end
   
     class TagPage < Page
-      def initialize(site, base, tag)
+      def initialize(site, base, dir, tag)
         @site = site
         @base = base
-        @dir  = File.join('tag', tag.downcase.gsub(' ', '-'))
-        @name = 'index.html'
+        @dir  = dir
+        @name = "#{tag.downcase.gsub(' ', '-')}.html"
   
         self.process(@name)
         self.read_yaml(File.join(base, '_layouts'), 'tag.html')
