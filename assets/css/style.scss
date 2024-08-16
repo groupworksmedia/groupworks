@@ -1,7 +1,12 @@
+---
+---
+
+// Jekyll front matter (empty) above is necessary
+
 // Variables
-$primary-bg: #000000;  // Explicit black
+$primary-bg: #000000;
 $secondary-bg: #111111;
-$primary-text: #ffffff;  // Explicit white
+$primary-text: #ffffff;
 $link-color: #99bbff;
 $link-hover-color: #bbddff;
 $max-width: 1200px;
@@ -15,18 +20,13 @@ $max-width: 1200px;
   }
 }
 
-// Reset and base styles
-html {
+// Base styles
+html, body {
   background-color: $primary-bg;
   color: $primary-text;
-}
-
-body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: $primary-bg;
-  color: $primary-text;
   line-height: 1.6;
 }
 
@@ -44,9 +44,9 @@ body {
 
 // Typography
 h1, h2, h3, h4, h5, h6 {
+  color: $primary-text;
   margin-top: 0;
   margin-bottom: 0.5em;
-  color: $primary-text;  // Explicitly set heading color
 }
 
 h1 { font-size: 2.5em; }
@@ -62,16 +62,6 @@ h6 { font-size: 1em; }
   h3 { font-size: 1.6em; }
   h4 { font-size: 1.4em; }
   h5 { font-size: 1.2em; }
-  h6 { font-size: 1em; }
-}
-
-@include respond-to('small') {
-  h1 { font-size: 2em; }
-  h2 { font-size: 1.7em; }
-  h3 { font-size: 1.5em; }
-  h4 { font-size: 1.3em; }
-  h5 { font-size: 1.1em; }
-  h6 { font-size: 1em; }
 }
 
 // Header styles
@@ -82,16 +72,7 @@ header {
 
   h1 {
     margin: 0;
-    font-size: 2.5em;
-    color: $primary-text;  // Explicitly set header title color
-
-    @include respond-to('medium') {
-      font-size: 2.2em;
-    }
-
-    @include respond-to('small') {
-      font-size: 2em;
-    }
+    color: $primary-text;
   }
 }
 
@@ -127,8 +108,6 @@ nav {
 // Main content styles
 .content {
   padding: 40px 0;
-  background-color: $primary-bg;  // Explicitly set content background
-  color: $primary-text;  // Explicitly set content text color
 }
 
 // Footer styles
@@ -136,9 +115,7 @@ footer {
   background-color: $secondary-bg;
   text-align: center;
   padding: 20px 0;
-  position: relative;
-  width: 100%;
-  color: $primary-text;  // Explicitly set footer text color
+  color: $primary-text;
 }
 
 // Link styles
@@ -156,7 +133,7 @@ img {
   height: auto;
 }
 
-// Ensure form inputs and textareas have white text
+// Form styles
 input, textarea, select {
   color: $primary-text;
   background-color: $secondary-bg;
