@@ -9,11 +9,23 @@ If this is your first time visiting the blog, here we share our unique thoughts 
 # Latest Blog Posts
 
 <div class="newspaper-layout">
-  {% for post in site.posts %}
+  {% for post in site.posts limit:13 %}
+    {% if forloop.first %}
       <div class="featured-article">
         <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
         {{ post.excerpt }}
       </div>
+    {% endif %}
   {% endfor %}
+  
+  <div class="column-articles">
+    {% for post in site.posts offset:1 limit:12 %}
+      <div class="column-article">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+        {{ post.excerpt | truncatewords: 30 }}
+      </div>
+    {% endfor %}
+  </div>
 </div>

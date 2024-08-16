@@ -17,11 +17,6 @@ $border-color: #333;
   transition: $property $duration $timing;
 }
 
-// Functions
-@function generate-grid-template($columns) {
-  @return unquote("repeat(#{$columns}, minmax(0, 1fr))");
-}
-
 // Base styles
 body {
   background-color: $background-color;
@@ -95,14 +90,14 @@ a {
 
 // Newspaper layout
 .newspaper-layout {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   padding: 2rem 0;
-  grid-template-columns: generate-grid-template(1);
 }
 
 .featured-article {
-  grid-column: 1 / -1;
+  flex-basis: 100%;
   border-bottom: 2px solid $border-color;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
@@ -113,12 +108,19 @@ a {
   }
 }
 
+.column-articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+
 .column-article {
+  flex: 1 1 calc(33.333% - 2rem);
   display: flex;
   flex-direction: column;
   border: 1px solid $border-color;
   padding: 1rem;
-  height: 100%;
 
   h3 {
     font-size: 1.2rem;
@@ -138,22 +140,20 @@ a {
     flex-direction: column;
     align-items: center;
   }
+
+  .column-article {
+    flex-basis: 100%;
+  }
 }
 
-@media (min-width: 601px) {
-  .newspaper-layout {
-    grid-template-columns: generate-grid-template(2);
+@media (min-width: 601px) and (max-width: 900px) {
+  .column-article {
+    flex-basis: calc(50% - 1rem);
   }
 }
 
 @media (min-width: 901px) {
-  .newspaper-layout {
-    grid-template-columns: generate-grid-template(3);
-  }
-}
-
-@media (min-width: 1201px) {
-  .newspaper-layout {
-    grid-template-columns: generate-grid-template(4);
+  .column-article {
+    flex-basis: calc(33.333% - 1.333rem);
   }
 }
