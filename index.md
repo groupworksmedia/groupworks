@@ -8,22 +8,7 @@ If this is your first time visiting the blog, here we share our unique thoughts 
 
 # Latest Blog Posts
 
----
-layout: default
-title: Home
----
-
-# Latest Blog Posts
-
----
-layout: default
-title: Home
----
-
-# Latest Blog Posts
-
 <div class="newspaper-layout">
-{% raw %}
 {% for post in site.posts %}
   {% if forloop.first %}
     <div class="featured-article">
@@ -37,7 +22,4 @@ title: Home
       <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
       <p>{{ post.excerpt | truncatewords: 30 }}</p>
     </div>
-  {% endif %}
-{% endfor %}
-{% endraw %}
 </div>
