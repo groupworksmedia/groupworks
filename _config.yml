@@ -1,5 +1,6 @@
 plugins:
   - jekyll-sass-converter
+  - jekyll-coffeescript
 
 sass:
 sass_dir: _sass
