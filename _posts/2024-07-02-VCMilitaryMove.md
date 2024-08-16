@@ -3,6 +3,7 @@ layout: posts
 author: Max Scott-Hayes
 title: "Venture Capital's Bold Move into Military Tech"
 date: 2024-07-02
+tags: technology, finance, defense
 ---
 In the heart of Silicon Valley, a new breed of defence innovators is emerging, backed by billions in venture capital. This shift represents a fundamental reimagining of how military technology is developed and deployed.
 

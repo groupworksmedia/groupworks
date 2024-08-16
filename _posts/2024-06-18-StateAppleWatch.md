@@ -3,6 +3,7 @@ layout: posts
 author: Michael Kir
 title: "State of the Apple Watch"
 date: 2024-06-17
+tags: technology
 ---
 I am very pleased with the official announcement of the watchOS 11. Because every single software update from here onwards is going to be more impactful to consumers than ever before. Apple knows exactly what they are doing when they roll out an update. From the keynote you might think that the watchOS 11 is barely an update. However in reality it is actually quite the opposite. Since the initial release of the Apple Watch, Apple has been working on core functionality of the watch and making it less reliant on the iPhone for its core functionality, not to mention setting it up and configuring it through the iPhone app. According to leaks and public documents, Apple once discussed bringing the Apple Watch app to Android. I am willing to bet they discussed bringing to other Apple devices as well. However the conclusion that they came to is that it is not worth while in the long run to maintain a distribution of this app on many platforms when eventually they aim to make the Apple Watch a fully independent product. 
 

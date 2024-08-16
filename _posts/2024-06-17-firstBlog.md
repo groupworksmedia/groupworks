@@ -3,6 +3,7 @@ layout: posts
 author: Michael Kir
 title: "My First Blog Post"
 date: 2024-06-17
+tags: technology
 ---
 My experience with setting up a blog has not been the easiest. For anyone looking to set up their own blog I would not necessarily recommend the way that I have chosen, but it depends on what your objective is. 
 

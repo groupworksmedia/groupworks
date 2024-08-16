@@ -2,10 +2,6 @@
 title: Flavournomics - Find Your Flavour of economics
 description: My personal Blog
 
-# Build settings
-markdown: kramdown
-permalink: pretty
-
 # Sass settings
 sass:
   sass_dir: _sass
