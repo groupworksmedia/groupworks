@@ -9,3 +9,11 @@ style: compressed
 title: Flavournomics - Find Your Flavour of economics
 
 description: My personal Blog
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
