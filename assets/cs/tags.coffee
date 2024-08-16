@@ -1,3 +1,5 @@
+---
+---
 document.addEventListener 'DOMContentLoaded', ->
   tagLinks = document.querySelectorAll('.tag-link')
   tagResults = document.getElementById('tag-results')
