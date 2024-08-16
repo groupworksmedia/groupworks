@@ -30,11 +30,6 @@ body {
   line-height: 1.6;
 }
 
-// Ensure all text is white by default
-* {
-  color: $primary-text;
-}
-
 .container {
   width: 90%;
   max-width: $max-width;
