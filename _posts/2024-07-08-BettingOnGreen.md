@@ -1,12 +1,9 @@
 ---
 layout: post
 author: Max Scott-Hayes
-title: "Betting on Green"
+title: "Private Equity: The Hidden Force Driving the Energy Transition"
 date: 2024-07-08
 ---
-
-## Private Equity: The Hidden Force Driving the Energy Transition
-
 As the world grapples with the urgent need to decarbonise, a powerful but often overlooked force is quietly reshaping the future of energy: private equity. With trillions of dollars at their disposal and a penchant for transformative investments, PE firms are emerging as critical players in accelerating the global shift towards clean energy. However, this trend raises important questions about transparency, market dynamics, and the ultimate impact on our energy landscape.
 
 ### The Scale of the Challenge - and the Opportunity 
