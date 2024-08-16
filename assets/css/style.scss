@@ -5,6 +5,11 @@ body {
   background-color: black;
   color: white;
 }
-link{
-  color: lightblue
+// Make sure links are still distinguishable
+a {
+  text-decoration: underline;
+  
+  &:hover {
+    text-decoration: none;
+  }
 }
