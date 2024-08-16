@@ -92,7 +92,7 @@ a {
 // Newspaper layout
 .newspaper-layout {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 2rem;
   padding: 2rem 0;
 }
@@ -109,19 +109,12 @@ a {
   }
 }
 
-.flex-row {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1em;
-  margin-bottom: 2rem;
-}
-
 .post {
-  flex-grow: 1;
-  flex-basis: calc(50% - 0.5em);
+  flex: 1 1 calc(33.333% - 1.333rem);
   background: $post-background;
   padding: 1rem;
   box-sizing: border-box;
+  margin-bottom: 2rem;
 
   h3 {
     font-size: 1.2rem;
@@ -142,17 +135,13 @@ a {
     align-items: center;
   }
 
-  .flex-row {
-    flex-direction: column;
-  }
-
   .post {
     flex-basis: 100%;
   }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .post {
-    flex-basis: calc(33.333% - 0.667em);
+    flex-basis: calc(50% - 1rem);
   }
 }
