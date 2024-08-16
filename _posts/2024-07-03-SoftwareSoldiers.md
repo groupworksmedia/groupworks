@@ -3,7 +3,7 @@ layout: posts
 author: Max Scott-Hayes
 title: "The VC-Driven Transformation of Modern Security"
 date: 2024-07-03
-tags: technology, finance, defense
+tags: technology finance defense
 ---
 The future of warfare is being coded in Silicon Valley. As venture capital pours into defence technology startups, a new paradigm is emerging: software-defined warfare. This shift represents a fundamental change in military capability development and deployment, with profound implications for future conflicts.
 
