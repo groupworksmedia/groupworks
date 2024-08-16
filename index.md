@@ -7,7 +7,7 @@ title: Homepage
 If this is your first time visiting the blog, here we share our unique thoughts on topics that we have learnt about.
 
 # Latest Blog Posts
-
+<div class="newspaper-layout">
   <div class="featured-article">
   {% for post in site.posts %}
     <div class="post">
@@ -16,4 +16,5 @@ If this is your first time visiting the blog, here we share our unique thoughts 
       {{ post.excerpt }}
     </div>
   {% endfor %}
+  </div>
 </div>
