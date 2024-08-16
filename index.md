@@ -15,14 +15,29 @@ title: Home
 
 # Latest Blog Posts
 
+---
+layout: default
+title: Home
+---
+
+# Latest Blog Posts
+
+<div class="newspaper-layout">
+{% raw %}
 {% for post in site.posts %}
   {% if forloop.first %}
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <p>{{ post.date | date: "%B %-d, %Y" }}</p>
-    <p>{{ post.excerpt }}</p>
+    <div class="featured-article">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+      <p>{{ post.excerpt }}</p>
+    </div>
   {% else %}
-    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    <p>{{ post.date | date: "%B %-d, %Y" }}</p>
-    <p>{{ post.excerpt | truncatewords: 30 }}</p>
+    <div class="column-article">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+      <p>{{ post.excerpt | truncatewords: 30 }}</p>
+    </div>
   {% endif %}
 {% endfor %}
+{% endraw %}
+</div>
