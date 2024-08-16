@@ -11,6 +11,7 @@ $link-active-color: #ffff00;
 $menu-background-color: #333;
 $menu-hover-color: #111;
 $border-color: #333;
+$post-background: #222;
 
 // Mixins
 @mixin transition($property: all, $duration: 0.3s, $timing: ease) {
@@ -91,7 +92,7 @@ a {
 // Newspaper layout
 .newspaper-layout {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
   padding: 2rem 0;
 }
@@ -108,19 +109,19 @@ a {
   }
 }
 
-.column-articles {
+.flex-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  width: 100%;
+  flex-flow: row wrap;
+  gap: 1em;
+  margin-bottom: 2rem;
 }
 
-.column-article {
-  flex: 1 1 calc(33.333% - 2rem);
-  display: flex;
-  flex-direction: column;
-  border: 1px solid $border-color;
+.post {
+  flex-grow: 1;
+  flex-basis: calc(50% - 0.5em);
+  background: $post-background;
   padding: 1rem;
+  box-sizing: border-box;
 
   h3 {
     font-size: 1.2rem;
@@ -141,19 +142,17 @@ a {
     align-items: center;
   }
 
-  .column-article {
+  .flex-row {
+    flex-direction: column;
+  }
+
+  .post {
     flex-basis: 100%;
   }
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
-  .column-article {
-    flex-basis: calc(50% - 1rem);
-  }
-}
-
 @media (min-width: 901px) {
-  .column-article {
-    flex-basis: calc(33.333% - 1.333rem);
+  .post {
+    flex-basis: calc(33.333% - 0.667em);
   }
 }
