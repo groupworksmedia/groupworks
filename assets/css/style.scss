@@ -75,3 +75,48 @@ a {
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
+
+// Horizontal Menu Styles
+.site-nav {
+  margin-bottom: 2rem;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin: 0 1rem;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: $link-color;
+    transition: color 0.3s ease;
+
+    &:hover, &:focus {
+      color: $link-hover-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Responsive adjustments for the menu
+@media (max-width: 600px) {
+  .site-nav {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+}
