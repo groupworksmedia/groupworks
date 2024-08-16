@@ -1,0 +1,120 @@
+// Variables
+$primary-bg: #000;
+$secondary-bg: #111;
+$primary-text: #fff;
+$link-color: #9bf;
+$link-hover-color: #bdf;
+$max-width: 1200px;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "medium" {
+    @media (max-width: 768px) { @content; }
+  } @else if $breakpoint == "small" {
+    @media (max-width: 480px) { @content; }
+  }
+}
+
+// Reset and base styles
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: $primary-bg;
+  color: $primary-text;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include respond-to('small') {
+    width: 95%;
+    padding: 0 10px;
+  }
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+// Header styles
+header {
+  background-color: $secondary-bg;
+  padding: 20px 0;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 2.5em;
+
+    @include respond-to('medium') {
+      font-size: 2em;
+    }
+
+    @include respond-to('small') {
+      font-size: 1.5em;
+    }
+  }
+}
+
+// Navigation styles
+nav {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+
+    li {
+      display: inline;
+      margin-right: 20px;
+
+      @include respond-to('medium') {
+        display: block;
+        margin: 10px 0;
+      }
+
+      a {
+        color: $primary-text;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Main content styles
+.content {
+  padding: 40px 0;
+}
+
+// Footer styles
+footer {
+  background-color: $secondary-bg;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+}
+
+// Link styles
+a {
+  color: $link-color;
+  
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+// Image styles
+img {
+  max-width: 100%;
+  height: auto;
+}
