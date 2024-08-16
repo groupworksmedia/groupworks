@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 author: Max Scott-Hayes
 title: "The Risks and Rewards of the Yen Carry Trade"
 date: 2024-08-12

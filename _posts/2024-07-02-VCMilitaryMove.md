@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 author: Max Scott-Hayes
 title: "Venture Capital's Bold Move into Military Tech"
 date: 2024-07-02

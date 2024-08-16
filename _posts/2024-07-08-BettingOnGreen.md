@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 author: Max Scott-Hayes
 title: "Private Equity: The Hidden Force Driving the Energy Transition"
 date: 2024-07-08

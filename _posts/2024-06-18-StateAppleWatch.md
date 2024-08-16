@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 author: Michael Kir
 title: "State of the Apple Watch"
 date: 2024-06-17

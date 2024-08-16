@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: posts
 author: Michael Kir
 title: "My First Blog Post"
 date: 2024-06-17
