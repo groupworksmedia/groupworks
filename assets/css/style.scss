@@ -1,14 +1,36 @@
 ---
 ---
-
+// Base styles
 body {
   background-color: black;
   color: white;
 }
 
-header nav ul,
-main .post-list,
-main .article-list {
-   list-style-type: none;
-   padding-left: 0;
+// Link styling
+a {
+  color: #00ffff; // Cyan color for unvisited links
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:visited {
+    color: #ff69b4; // Pink color for visited links
+  }
+
+  &:hover, &:focus {
+    color: #ffffff; // White color on hover/focus
+    text-decoration: underline;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  }
+
+  &:active {
+    color: #ffff00; // Yellow color when link is being clicked
+  }
+}
+
+// Remove list dots from all unordered lists
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
 }
