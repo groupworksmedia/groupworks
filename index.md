@@ -11,8 +11,8 @@ If this is your first time visiting the blog, here we share our unique thoughts 
 <ul>
   {% for post in site.posts %}
     <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <h3>{{ post.excerpt }}</h3>
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      {{ post.excerpt }}
     </li>
   {% endfor %}
 </ul>
