@@ -7,14 +7,13 @@ title: Homepage
 If this is your first time visiting the blog, here we share our unique thoughts on topics that we have learnt about.
 
 # Latest Blog Posts
-<div class="newspaper-layout">
-  <div class="featured-article">
+
+<ul class="post-list">
   {% for post in site.posts %}
-    <div class="post">
+    <li class="post">
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
       {{ post.excerpt }}
-    </div>
+    </li>
   {% endfor %}
-  </div>
-</div>
+</ul>
