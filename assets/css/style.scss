@@ -94,7 +94,8 @@ a {
 }
 
 .post {
-  border-bottom: 2px solid $background-color;
+  background-color: $background-color;
+  border-bottom: 1px solid $border-color;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
 
