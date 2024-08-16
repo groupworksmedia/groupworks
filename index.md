@@ -10,18 +10,10 @@ If this is your first time visiting the blog, here we share our unique thoughts 
 
 <div class="newspaper-layout">
   {% for post in site.posts %}
-    {% if forloop.first %}
       <div class="featured-article">
         <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
         {{ post.excerpt }}
       </div>
-    {% else %}
-      <div class="column-article">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
-        {{ post.excerpt | truncatewords: 30 }}
-      </div>
-    {% endif %}
   {% endfor %}
 </div>
