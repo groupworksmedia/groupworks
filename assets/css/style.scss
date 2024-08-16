@@ -10,7 +10,7 @@ $link-hover-color: #ffffff;
 $link-active-color: #ffff00;
 $menu-background-color: #333;
 $menu-hover-color: #111;
-$border-color: #333;
+$border-color: #444; // Lighter color for more visibility
 
 // Mixins
 @mixin transition($property: all, $duration: 0.3s, $timing: ease) {
@@ -95,7 +95,7 @@ a {
 
 .post {
   background-color: $background-color;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 2px solid $border-color; // Increased thickness for visibility
   margin-bottom: 2rem;
   padding-bottom: 2rem;
 
