@@ -8,12 +8,31 @@ If this is your first time visiting the blog, here we share our unique thoughts 
 
 # Latest Blog Posts
 
-<ul class="post-list">
-  {% for post in site.posts %}
-    <li class="post">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
+<div class="content-wrapper">
+  <main class="post-list">
+    <h1>Blog Posts</h1>
+    {% for post in site.posts %}
+      <article class="post">
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+        {{ post.excerpt }}
+      </article>
+    {% endfor %}
+  </main>
+
+  <aside class="tag-sidebar">
+    <h2>Tags</h2>
+    <input type="text" id="tag-search" placeholder="Search tags...">
+    <ul class="tag-cloud">
+    {% for tag in site.tags %}
+      <li>
+        <a href="{{ '/tags#' | append: tag[0] | slugify | relative_url }}">
+          {{ tag[0] }} <span>({{ tag[1] | size }})</span>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </aside>
+</div>
+
+<script src="{{ '/assets/js/search.js' | relative_url }}"></script>

@@ -120,3 +120,83 @@ a {
     }
   }
 }
+
+// Content layout
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.post-list {
+  // ... (your existing post styles)
+}
+
+// Tag sidebar styles
+.tag-sidebar {
+  background-color: rgba($background-color, 0.8);
+  padding: 1rem;
+  border-radius: 5px;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+#tag-search {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.tag-cloud {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    background-color: $link-color;
+    color: $background-color;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+
+    &:hover, &:focus {
+      background-color: $link-hover-color;
+      text-decoration: none;
+    }
+
+    span {
+      font-size: 0.8em;
+      margin-left: 0.3rem;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 767px) {
+  .tag-sidebar {
+    order: 1;
+    margin-top: 2rem;
+  }
+}
