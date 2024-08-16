@@ -8,6 +8,7 @@ If this is your first time visiting the blog, here we share our unique thoughts 
 
 # Latest Blog Posts
 
+{% raw %}
 <main class="newspaper-layout">
   {% for post in site.posts %}
     {% if forloop.first %}
@@ -25,3 +26,4 @@ If this is your first time visiting the blog, here we share our unique thoughts 
     {% endif %}
   {% endfor %}
 </main>
+{% endraw %}
