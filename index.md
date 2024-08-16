@@ -8,7 +8,7 @@ If this is your first time visiting the blog, here we share our unique thoughts 
 
 # Latest Blog Posts
 
-  <div class="post-layout">
+  <div class="featured-article">
   {% for post in site.posts %}
     <div class="post">
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
