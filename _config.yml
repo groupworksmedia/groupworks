@@ -1,11 +1,38 @@
-plugins:
-  - jekyll-sass-converter
-  - jekyll-coffeescript
-
-sass:
-sass_dir: _sass
-style: compressed
-
+# Site settings
 title: Flavournomics - Find Your Flavour of economics
-
 description: My personal Blog
+url: "" # Add your website URL here
+baseurl: "" # Leave empty if your site is at the root of your domain
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Sass settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
+plugins:
+ - jekyll-sass-converter
+ - jekyll-coffeescript
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Default front matter for posts
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Timezone setting (change to your timezone)
+timezone: UTC
