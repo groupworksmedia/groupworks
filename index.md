@@ -8,10 +8,6 @@ If this is your first time visiting the blog, here we share our unique thoughts 
 
 # Latest Blog Posts
 
----
-layout: default
----
-
 <div class="content-wrapper">
   <main class="post-list">
     <h1>Blog Posts</h1>
