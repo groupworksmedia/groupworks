@@ -18,7 +18,7 @@ If this is your first time visiting the blog, here we share our unique thoughts 
           {{ post.date | date: "%B %-d, %Y" }} |
           Tags:
           {% for tag in post.tags %}
-            <a href="{{ '/tag/' | append: tag | downcase | replace: ' ', '-' | append: '.html' | relative_url }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+            <a href="{{ '/tag/' | append: tag | slugify | append: '.html' | relative_url }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
           {% endfor %}
         </p>
         {{ post.excerpt }}
@@ -32,7 +32,7 @@ If this is your first time visiting the blog, here we share our unique thoughts 
     <ul class="tag-cloud">
     {% for tag in site.tags %}
       <li>
-        <a href="{{ '/tag/' | append: tag[0] | downcase | replace: ' ', '-' | append: '.html' | relative_url }}">
+        <a href="{{ '/tag/' | append: tag[0] | slugify | append: '.html' | relative_url }}">
           {{ tag[0] }} <span>({{ tag[1] | size }})</span>
         </a>
       </li>
