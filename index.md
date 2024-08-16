@@ -14,7 +14,13 @@ If this is your first time visiting the blog, here we share our unique thoughts 
     {% for post in site.posts %}
       <article class="post">
         <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <p class="post-meta">
+          {{ post.date | date: "%B %-d, %Y" }} |
+          Tags:
+          {% for tag in post.tags %}
+            <a href="{{ '/tag/' | append: tag | downcase | replace: ' ', '-' | relative_url }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </p>
         {{ post.excerpt }}
       </article>
     {% endfor %}
@@ -26,7 +32,7 @@ If this is your first time visiting the blog, here we share our unique thoughts 
     <ul class="tag-cloud">
     {% for tag in site.tags %}
       <li>
-        <a href="{{ '/tags#' | append: tag[0] | slugify | relative_url }}">
+        <a href="{{ '/tag/' | append: tag[0] | downcase | replace: ' ', '-' | relative_url }}">
           {{ tag[0] }} <span>({{ tag[1] | size }})</span>
         </a>
       </li>
