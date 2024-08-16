@@ -1,9 +1,9 @@
 // Variables
-$primary-bg: #000;
-$secondary-bg: #111;
-$primary-text: #fff;
-$link-color: #9bf;
-$link-hover-color: #bdf;
+$primary-bg: #000000;  // Explicit black
+$secondary-bg: #111111;
+$primary-text: #ffffff;  // Explicit white
+$link-color: #99bbff;
+$link-hover-color: #bbddff;
 $max-width: 1200px;
 
 // Mixins
@@ -16,13 +16,23 @@ $max-width: 1200px;
 }
 
 // Reset and base styles
-body, html {
+html {
+  background-color: $primary-bg;
+  color: $primary-text;
+}
+
+body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: $primary-bg;
   color: $primary-text;
   line-height: 1.6;
+}
+
+// Ensure all text is white by default
+* {
+  color: $primary-text;
 }
 
 .container {
@@ -40,6 +50,33 @@ body, html {
 // Typography
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
+  margin-bottom: 0.5em;
+  color: $primary-text;  // Explicitly set heading color
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+@include respond-to('medium') {
+  h1 { font-size: 2.2em; }
+  h2 { font-size: 1.8em; }
+  h3 { font-size: 1.6em; }
+  h4 { font-size: 1.4em; }
+  h5 { font-size: 1.2em; }
+  h6 { font-size: 1em; }
+}
+
+@include respond-to('small') {
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.7em; }
+  h3 { font-size: 1.5em; }
+  h4 { font-size: 1.3em; }
+  h5 { font-size: 1.1em; }
+  h6 { font-size: 1em; }
 }
 
 // Header styles
@@ -51,13 +88,14 @@ header {
   h1 {
     margin: 0;
     font-size: 2.5em;
+    color: $primary-text;  // Explicitly set header title color
 
     @include respond-to('medium') {
-      font-size: 2em;
+      font-size: 2.2em;
     }
 
     @include respond-to('small') {
-      font-size: 1.5em;
+      font-size: 2em;
     }
   }
 }
@@ -84,6 +122,7 @@ nav {
 
         &:hover {
           text-decoration: underline;
+          color: $link-hover-color;
         }
       }
     }
@@ -93,6 +132,8 @@ nav {
 // Main content styles
 .content {
   padding: 40px 0;
+  background-color: $primary-bg;  // Explicitly set content background
+  color: $primary-text;  // Explicitly set content text color
 }
 
 // Footer styles
@@ -102,6 +143,7 @@ footer {
   padding: 20px 0;
   position: relative;
   width: 100%;
+  color: $primary-text;  // Explicitly set footer text color
 }
 
 // Link styles
@@ -117,4 +159,10 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+// Ensure form inputs and textareas have white text
+input, textarea, select {
+  color: $primary-text;
+  background-color: $secondary-bg;
 }
