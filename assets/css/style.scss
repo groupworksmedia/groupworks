@@ -5,19 +5,10 @@ body {
   background-color: black;
   color: white;
 }
-// Remove list dots from menu and article lists
-nav ul,
-.post-list,
-.article-list {
-  list-style-type: none;
-  padding-left: 0;
-}
 
-// If the above selector doesn't work, you might need to be more specific
-// Uncomment and modify these lines as needed:
-// header nav ul,
-// main .post-list,
-// main .article-list {
-//   list-style-type: none;
-//   padding-left: 0;
-// }
+header nav ul,
+main .post-list,
+main .article-list {
+   list-style-type: none;
+   padding-left: 0;
+}
