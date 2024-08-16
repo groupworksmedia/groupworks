@@ -3,11 +3,6 @@ layout: default
 title: Homepage
 ---
 
-
-If this is your first time visiting the blog, here we share our unique thoughts on topics that we have learnt about.
-
-# Latest Blog Posts
-
 <div class="content-wrapper">
   <main class="post-list">
     <h1>Blog Posts</h1>
