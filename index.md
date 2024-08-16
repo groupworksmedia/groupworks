@@ -15,20 +15,14 @@ title: Home
 
 # Latest Blog Posts
 
-<main class="newspaper-layout">
-  {% raw %}{% for post in site.posts %}{% endraw %}
-    {% raw %}{% if forloop.first %}{% endraw %}
-      <article class="featured-article">
-        <h2><a href="{% raw %}{{ post.url | relative_url }}{% endraw %}">{% raw %}{{ post.title }}{% endraw %}</a></h2>
-        <p class="post-meta">{% raw %}{{ post.date | date: "%B %-d, %Y" }}{% endraw %}</p>
-        <p>{% raw %}{{ post.excerpt }}{% endraw %}</p>
-      </article>
-    {% raw %}{% else %}{% endraw %}
-      <article class="column-article">
-        <h3><a href="{% raw %}{{ post.url | relative_url }}{% endraw %}">{% raw %}{{ post.title }}{% endraw %}</a></h3>
-        <p class="post-meta">{% raw %}{{ post.date | date: "%B %-d, %Y" }}{% endraw %}</p>
-        <p>{% raw %}{{ post.excerpt | truncatewords: 30 }}{% endraw %}</p>
-      </article>
-    {% raw %}{% endif %}{% endraw %}
-  {% raw %}{% endfor %}{% endraw %}
-</main>
+{% for post in site.posts %}
+  {% if forloop.first %}
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p>{{ post.date | date: "%B %-d, %Y" }}</p>
+    <p>{{ post.excerpt }}</p>
+  {% else %}
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p>{{ post.date | date: "%B %-d, %Y" }}</p>
+    <p>{{ post.excerpt | truncatewords: 30 }}</p>
+  {% endif %}
+{% endfor %}
