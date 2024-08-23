@@ -9,6 +9,11 @@
 <body>
     {% include header.html %}
     
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search blog posts...">
+        <ul id="results-container"></ul>
+      </div>
+
     <main>
         {{ content }}
     </main>
