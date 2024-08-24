@@ -43,7 +43,7 @@ a {
   }
 }
 
-// Post list
+// Post list styles
 .post-list {
   list-style-type: none;
   padding: 0;
@@ -121,6 +121,9 @@ a {
   @media (min-width: 768px) {
     flex-direction: row;
   }
+  
+  // DEBUG: Ensure content wrapper doesn't hide overflow
+  overflow: visible !important;
 }
 
 // Main content area
@@ -150,25 +153,52 @@ a {
   h2 {
     margin-top: 0;
   }
+
+  // Search input styles
+  #search-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    background-color: $background-color;
+    color: $text-color;
+    font-size: 16px;
+    display: block;
+    z-index: 10;
+    position: relative;
+    
+    &:focus {
+      outline: 2px solid $link-color;
+      outline-offset: 1px;
+    }
+
+    // DEBUG: Highlight search input
+    border: 2px solid red !important;
+    background-color: rgba(255, 0, 0, 0.1) !important;
+    
+    &:focus {
+      outline: 2px solid yellow !important;
+    }
+  }
+
+  // DEBUG: Ensure all elements in sidebar are interactive
+  * {
+    pointer-events: auto !important;
+  }
 }
 
-#search-input {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid $border-color;
-  border-radius: 3px;
-  background-color: $background-color;
-  color: $text-color;
-  font-size: 16px;
-}
-
+// Tag cloud styles
 .tag-cloud {
   list-style-type: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+
+  // DEBUG: Highlight tag cloud
+  border: 2px dotted blue !important;
+
   li {
     margin: 0;
   }
@@ -198,6 +228,9 @@ a {
   margin: 0 auto;
   padding: 0 1rem;
 
+  // DEBUG: Highlight results containers
+  border: 2px dashed green !important;
+
   h2 {
     color: $text-color;
   }
@@ -223,6 +256,7 @@ a {
   }
 }
 
+// Back to all posts button
 #back-to-all {
   display: inline-block;
   margin-top: 1rem;
@@ -237,6 +271,9 @@ a {
     background-color: $link-hover-color;
     text-decoration: none;
   }
+
+  // DEBUG: Highlight back to all button
+  border: 2px dashed green !important;
 }
 
 // Responsive adjustments
@@ -245,9 +282,49 @@ a {
     order: -1; // Move to top on mobile
   }
 }
+
 // Styling for reading time
 .reading-time {
   font-style: italic;
   color: $text-color;
   opacity: 0.8;
 }
+
+// DEBUG: Add overlay to check for invisible elements
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  box-shadow: inset 0 0 100px rgba(255, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+// DEBUG: Ensure visibility of critical elements
+#search-input, .tag-cloud, #search-results, #tag-results, #back-to-all {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+// NOTE: The debug styles added above will help identify any layout or visibility issues.
+// - Red border on search input helps locate it visually
+// - Yellow outline on focus confirms if the input is receiving focus
+// - Blue dotted border around tag cloud helps identify its position and size
+// - Green dashed borders around results and back button help locate these elements
+// - The red overlay helps identify any invisible elements that might be blocking interaction
+// - Forced display and visibility ensure critical elements are not accidentally hidden
+
+// After adding these styles, check the following:
+// 1. Is the search input visible with a red border?
+// 2. Can you focus on the search input and see a yellow outline?
+// 3. Are the tag cloud, search results, and back button visible with their respective borders?
+// 4. Is there any unexpected red overlay indicating invisible elements?
+
+// If issues persist:
+// - Use browser developer tools to inspect the elements
+// - Check for any CSS that might be overriding these styles
+// - Verify that the HTML structure matches what's expected in the CSS
