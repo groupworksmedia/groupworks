@@ -11,6 +11,7 @@ class SearchTags
     @currentTag = document.getElementById('current-tag')
     @backToAll = document.getElementById('back-to-all')
     @contentWrapper = document.querySelector('.content-wrapper')
+    @allPosts = document.getElementById('all-posts')
     @posts = document.querySelectorAll('.post')
     @tagLinks = document.querySelectorAll('.tag-link')
     @postsData = []
@@ -26,6 +27,7 @@ class SearchTags
         url: post.querySelector('h2 a').href
         content: post.textContent
         tags: post.getAttribute('data-tags').split(',').map (tag) -> tag.trim().toLowerCase()
+        element: post
 
   bindEvents: ->
     @searchInput.addEventListener 'input', @handleSearch
@@ -52,28 +54,35 @@ class SearchTags
   displaySearchResults: (results) ->
     @hideAllSections()
     @searchResults.style.display = 'block'
-    @backToAll.style.display = 'block'
-    @resultsContainer.innerHTML = results.map((post) ->
-      "<li><a href='#{post.url}'>#{post.title}</a></li>"
-    ).join('')
+    @backToAll.style.display = 'inline-block'
+    if results.length > 0
+      @resultsContainer.innerHTML = results.map((post) ->
+        post.element.outerHTML
+      ).join('')
+    else
+      @resultsContainer.innerHTML = "<p>No results found.</p>"
 
   showTaggedPosts: (tag) ->
     @hideAllSections()
     @tagResults.style.display = 'block'
-    @backToAll.style.display = 'block'
+    @backToAll.style.display = 'inline-block'
     @currentTag.textContent = tag
     taggedPosts = @postsData.filter (post) -> post.tags.includes(tag.toLowerCase())
-    @taggedPosts.innerHTML = taggedPosts.map((post) ->
-      "<li><a href='#{post.url}'>#{post.title}</a></li>"
-    ).join('')
+    if taggedPosts.length > 0
+      @taggedPosts.innerHTML = taggedPosts.map((post) ->
+        post.element.outerHTML
+      ).join('')
+    else
+      @taggedPosts.innerHTML = "<p>No posts found with this tag.</p>"
 
   showAllPosts: =>
     @hideAllSections()
     @contentWrapper.style.display = 'flex'
+    @allPosts.style.display = 'block'
     @searchInput.value = ''
 
   hideAllSections: ->
-    @contentWrapper.style.display = 'none'
+    @allPosts.style.display = 'none'
     @searchResults.style.display = 'none'
     @tagResults.style.display = 'none'
     @backToAll.style.display = 'none'
