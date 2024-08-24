@@ -11,6 +11,7 @@ title: Homepage
         <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <p class="post-meta">
           {{ post.date | date: "%B %-d, %Y" }} |
+          {% include reading_time.html content=post.content %} |
           Tags:
           {% for tag in post.tags %}
           <a href="#" class="tag-link" data-tag="{{ tag | downcase }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}

@@ -245,3 +245,9 @@ a {
     order: -1; // Move to top on mobile
   }
 }
+// Styling for reading time
+.reading-time {
+  font-style: italic;
+  color: $text-color;
+  opacity: 0.8;
+}
