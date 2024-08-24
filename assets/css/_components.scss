@@ -1,0 +1,148 @@
+// Post list styles
+.post-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post {
+  border-bottom: 1px solid $border-color;
+  padding: 2rem 0;
+  &:last-child {
+    border-bottom: none;
+  }
+  h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+}
+
+.post-meta {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+// Horizontal Menu Styles
+.site-nav {
+  margin-bottom: 2rem;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  li {
+    margin: 0 1rem;
+  }
+  a {
+    display: inline-block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: $link-color;
+    transition: color 0.3s ease;
+    &:hover, &:focus {
+      color: $link-hover-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Responsive adjustments for the menu
+@media (max-width: 600px) {
+  .site-nav {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+// Sidebar styles
+.sidebar {
+  background-color: rgba($background-color, 0.8);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 2rem;
+
+  @media (min-width: 768px) {
+    width: 300px;
+    flex-shrink: 0;
+    margin-top: 0;
+  }
+}
+
+// Search container styles
+.search-container {
+  margin-bottom: 1rem;
+
+  #search-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    background-color: $background-color;
+    color: $text-color;
+    font-size: 16px;
+
+    &:focus {
+      outline: 2px solid $link-color;
+      outline-offset: 1px;
+    }
+  }
+}
+
+// Tags container styles
+.tags-container {
+  h2 {
+    margin-top: 0;
+    color: $text-color;
+  }
+
+  #tags-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    li {
+      cursor: pointer;
+      padding: 0.3rem 0.6rem;
+      background-color: $link-color;
+      color: $background-color;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+
+      &:hover, &.active {
+        background-color: $link-hover-color;
+      }
+    }
+  }
+}
+
+// Post tag styles
+.post-tag {
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  margin-right: 0.3rem;
+  background-color: $link-color;
+  color: $background-color;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+// Reading time styles
+.reading-time {
+  font-style: italic;
+  color: $text-color;
+  opacity: 0.8;
+}
