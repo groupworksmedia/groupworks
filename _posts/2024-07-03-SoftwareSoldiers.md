@@ -1,7 +1,7 @@
 ---
 layout: posts
 author: Max Scott-Hayes
-title: "The VC-Driven Transformation of Modern Security"
+title: "Software Soldiers: The VC-Driven Transformation of Modern Security"
 date: 2024-07-03
 tags: technology finance defense
 ---

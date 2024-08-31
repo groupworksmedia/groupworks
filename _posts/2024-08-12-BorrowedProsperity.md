@@ -1,7 +1,7 @@
 ---
 layout: posts
 author: Max Scott-Hayes
-title: "The Risks and Rewards of the Yen Carry Trade"
+title: "Borrowed Prosperity: The Risks and Rewards of the Yen Carry Trade"
 date: 2024-08-12
 tags: finance
 ---
