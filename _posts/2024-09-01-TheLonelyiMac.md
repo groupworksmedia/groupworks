@@ -1,0 +1,33 @@
+---
+layout: posts
+author: Michael Kir
+title: "The Lonely iMac"
+date: 2024-09-01
+tags: technology electronics communication
+---
+A well know YouTuber, Luke Miani, has recently released a video about iMac titled [“What is Apple Thinking”](https://www.youtube.com/watch?v=c2PRXEq-3YY&t=631s) where he criticises Apple for not releasing a new 27 inch iMac with a powerful chip like a M Pro chip or M Max chip. Apple Studio Display is 27 inch monitor that has very extensive internals including a 13 bionic chip and flash memory. Essentially it has iPhone internals that power all the software features that are updated wirelessly. 
+
+Luke Miani argues that Apple should have a 27 inch iMac in its lineup in order to serve the professional crowd. Typically the professional crowd has significantly bigger budgets to spend on technology and they have significantly different requirements for these tools. In theory they would value new advances in tech technologies significantly above the consumer market because they could hypothetically make a difference. there have been some significant advances in the display technology however the development of computer internals has significantly outpaced with the growth of the display technologies as such this has produced a technological dilemma for Apple. As a very environmentally friendly company Apple wants to deliver the best value to its consumers whilst preserving the planet.
+
+There is typically two desktop form factors; one has the display separate of the computer and the other has a computer integrated in the display. Currently there is only one integrated solution, the 24 inch iMac. This computer does not offer any other chip except the base level configuration also known as an M chip.
+Separately from a display there are two computers that are offered they are Mark studio and Mac mini. Both of these computers cover the entire range of power and use cases. The Mac mini has the base M chip and the M Pro chip, while the Mac Studio has the M Max chip and M ultra chip.
+
+### Why does Apple do this?
+
+Apple’s philosophy is very simple. They see that they can update the displays and computes separately at different speeds. Additionally you can replace the display without replacing the entire computer. The setup is significantly more modular and that is a big benefit for professional users who care about having the best display or the best computer. Alternatively you can get whatever display you require for the use. For example if you would like to have an OLED panel on the display or the 240 frames refresh rate or 32” inch curved panel; you can get that separately. At the cost of a little bit more money.
+
+Additionally Apple is very clever about selling you their displays independently because you can connect it to the MacBook or iPad, so you don’t necessarily need a separate desktop computer. Again it is more convenient. Their goal with their displays is to provide that are best in class overall. If this means that one day they decide to swap to miniLED or tandum OLED you can buy the displays separately from the computer.
+
+It is very amazing that now you can use an iPad with an external monitor because you can use an external keyboard and mouse or a trackpad or work while having two displays. For a lot of people that means they do not need a Mac for their workflow.
+
+### Why does iMac still exist then?
+
+For the most crowd when you buy an iMac you buy an all in one, but you buy it foremost because you want to buy a good display with an in built computer and not have to worry about buying two separate things. *”For consumers you need simplicity, for professionals you need choice”* this sentence would encompass the philosophy that separates the two categories and the decisions that are made. This is the reason why the iMac exists in one size with one chip. It exists to serve the need of certain consumers for this type of device, for everyone else there is Mac *pause* or iPad and MacBook. Portable devices are so powerful right now that the reason why the all in one computer isn’t being sold is because a lot of the audience has funnelled into other products that weren’t possible 10 years ago. 
+
+### What is **Next**?
+
+Apple Vision category is exploring a new concept which is a Virtual Display. The fact that you can interact and make the displays bigger than ever in Vision OS 2, shows that Apple is leaning very heavily into the headset technology replacing displays one day through leveraging the highest and most dense resolution microLED displays that exist currently at the price which is significantly more affordable than Apple Display XDR.
+
+However for today, the quality of the Virtual display is limited so it may cater towards the audience that does not care so much about resolution and places the greater emphasis on the fact that they can leverage the spatial computing to have a lot of windows to multitask while increasing the size of the display for the Mac platform that aren’t commercially viable. 
+
+We have to wait and see what the Vision OS 3 would bring along side the lower price point of the Apple Vision Air.
