@@ -24,7 +24,7 @@ It is very amazing that now you can use an iPad with an external monitor because
 
 For the most crowd when you buy an iMac you buy an all in one, but you buy it foremost because you want to buy a good display with an in built computer and not have to worry about buying two separate things. *”For consumers you need simplicity, for professionals you need choice”* this sentence would encompass the philosophy that separates the two categories and the decisions that are made. This is the reason why the iMac exists in one size with one chip. It exists to serve the need of certain consumers for this type of device, for everyone else there is Mac *pause* or iPad and MacBook. Portable devices are so powerful right now that the reason why the all in one computer isn’t being sold is because a lot of the audience has funnelled into other products that weren’t possible 10 years ago. 
 
-### What is **Next**?
+### What is Next?
 
 Apple Vision category is exploring a new concept which is a Virtual Display. The fact that you can interact and make the displays bigger than ever in Vision OS 2, shows that Apple is leaning very heavily into the headset technology replacing displays one day through leveraging the highest and most dense resolution microLED displays that exist currently at the price which is significantly more affordable than Apple Display XDR.
 
