@@ -26,7 +26,7 @@ For the most crowd when you buy an iMac you buy an all in one, but you buy it fo
 
 ### What is Next?
 
-Apple Vision category is exploring a new concept which is a Virtual Display. The fact that you can interact and make the displays bigger than ever in Vision OS 2, shows that Apple is leaning very heavily into the headset technology replacing displays one day through leveraging the highest and most dense resolution microLED displays that exist currently at the price which is significantly more affordable than Apple Display XDR.
+Apple Vision category is exploring a new concept which is a Virtual Display. The fact that you can interact and make the displays bigger than ever in Vision OS 2, shows that Apple is leaning very heavily into the headset technology replacing displays one day through leveraging the highest and most dense resolution micro-OLED displays that exist currently at the price which is significantly more affordable than Apple Display XDR.
 
 However for today, the quality of the Virtual display is limited so it may cater towards the audience that does not care so much about resolution and places the greater emphasis on the fact that they can leverage the spatial computing to have a lot of windows to multitask while increasing the size of the display for the Mac platform that aren’t commercially viable. 
 
