@@ -2,7 +2,7 @@
 layout: posts
 author: Max Scott-Hayes
 title: "Stitched Up: The High Cost of Burberry's High Fashion Overhaul"
-date: 2024-08-30
+date: 2024-09-02
 tags: finance stocks fashion
 ---
 Burberry, the iconic British luxury fashion house known for its distinctive plaid pattern and trench coats, is facing a significant financial downturn that threatens its position as a leading global brand. The company's struggles have culminated in its impending exit from the FTSE 100 index after a 15-year tenure, marking a stark reversal of fortune for the once-thriving fashion powerhouse.
