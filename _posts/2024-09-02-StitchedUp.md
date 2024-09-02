@@ -1,7 +1,7 @@
 ---
 layout: posts
 author: Max Scott-Hayes
-title: "Stitched Up: The High Cost of Burberry's High Fashion Overhaul"
+title: "Stitched Up: The High Cost of Burberry's Fashion Overhaul"
 date: 2024-09-02
 tags: finance stocks fashion
 ---
