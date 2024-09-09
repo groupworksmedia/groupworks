@@ -3,7 +3,7 @@ layout: posts
 author: Max Scott-Hayes
 title: "Atomico's $1.24B Fundraise: A New Chapter for Venture Capital in Europe"
 date: 2024-09-09
-tags: finance VC
+tags: finance VC funds
 ---
 In a landmark moment for the European tech ecosystem, London-based venture capital titan Atomico has shattered records with its latest fundraise, securing an unprecedented $1.24 billion across two new funds. This monumental achievement not only underscores the resilience of the European VC landscape but also signals a seismic shift in the global tech industry, positioning Europe as a formidable contender on the world stage.
 
