@@ -1,8 +1,6 @@
 /* Font Declarations */
 @font-face {
   font-family: 'Open Sans';
-  src: url('path/to/OpenSans-Regular.woff2') format('woff2'),
-       url('path/to/OpenSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -10,8 +8,6 @@
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('path/to/OpenSans-Bold.woff2') format('woff2'),
-       url('path/to/OpenSans-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -19,8 +15,6 @@
 
 @font-face {
   font-family: 'Roboto Slab';
-  src: url('path/to/RobotoSlab-Regular.woff2') format('woff2'),
-       url('path/to/RobotoSlab-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
