@@ -459,3 +459,16 @@ select:focus {
     page-break-inside: avoid;
   }
 }
+/*Favicon plugin*/
+.wrapper a[href^="http"] {
+  padding-left: 19px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.wrapper a  {
+  display: block;
+  margin: 10px;
+  text-decoration: none;
+}
