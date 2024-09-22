@@ -380,6 +380,14 @@ select:focus {
     padding: 10px;
   }
 
+  .wrapper img,
+  .wrapper video {
+    width: calc(100% + 20px); /* 10px margin on each side */
+    max-width: none;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
   h1 { font-size: 2rem; }
   h2 { font-size: 1.75rem; }
   h3 { font-size: 1.5rem; }
@@ -459,6 +467,63 @@ select:focus {
     page-break-inside: avoid;
   }
 }
+
+
+/*Author box is for displaying Authors md file*/
+.author-box {
+    width: 200px;
+    height: auto;
+    min-height: 200px;
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.author-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.author-box h3 {
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+.author-box p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+    .author-box {
+        float: left;
+        margin: 0 20px 20px 0;
+    }
+
+    /* Clear the float to prevent layout issues */
+    .author-box::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+    .author-box {
+        width: auto;
+        max-width: 100%;
+        margin: 20px 0;
+    }
+}
+
 /*Favicon plugin*/
 .wrapper a[href^="http"] {
   padding-left: 19px;

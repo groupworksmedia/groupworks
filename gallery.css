@@ -1,0 +1,341 @@
+.gallery-wrapper {
+    --gallery-margin: 6px;
+    --header-height: 64px;
+    --setting-bar-height: 36px;
+    position: relative;
+}
+
+@media (min-aspect-ratio: 16/9) and (max-height: 500px) {
+  .gallery-wrapper {
+      --header-height: 0px;
+  }
+}
+
+.gallery-wrapper > .line {
+    display: inline-block;
+    position: relative;
+    border-right: 1px solid rgba(128, 128, 128, 0.3);
+    margin: 0px;
+    height: 28px;
+    top: 6px;
+}
+
+.gallery-wrapper > .control-background {
+    margin: 0px;
+    margin-top: var(--gallery-margin);
+    position: absolute;
+    height: 36px;
+    width: 110px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-wrapper > .control-background:nth-child(2) {
+    left: 116px;
+}
+
+.gallery-wrapper > input, .gallery-wrapper > label {
+    z-index: 128;
+    height: var(--setting-bar-height);
+    width: var(--setting-bar-height);
+    position: relative;
+    transition: 0.3s;
+}
+
+.gallery-wrapper > label > svg {
+    fill: rgba(0, 0, 0, 0.2);
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transition: 0.3s;
+    top: 4px;
+}
+
+.gallery-wrapper > label[for$=mode], .gallery-wrapper > label[for^=gallery] {
+    line-height: 32px;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    font-size: 0px;
+    transition: 0.3s;
+    border-radius: 4px;
+    margin: 2px;
+    margin-top: calc(var(--gallery-margin) + 2px);
+}
+
+.gallery-wrapper > label[for=gallery-large] {
+    margin-left: 8px;
+}
+
+.gallery-wrapper > label[for$=mode]:hover, .gallery-wrapper > label[for^=gallery]:hover, .gallery-wrapper > #thumbnail-mode:checked ~ label[for=thumbnail-mode], .gallery-wrapper > #gallery-mode:checked ~ label[for=gallery-mode], .gallery-wrapper > #plain-mode:checked ~ label[for=plain-mode], .gallery-wrapper > #gallery-large:checked ~ label[for=gallery-large], .gallery-wrapper > #gallery-medium:checked ~ label[for=gallery-medium], .gallery-wrapper > #gallery-small:checked ~ label[for=gallery-small] {
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.gallery-wrapper > #thumbnail-mode:checked ~ label[for=thumbnail-mode] > svg, .gallery-wrapper > #gallery-mode:checked ~ label[for=gallery-mode] > svg, .gallery-wrapper > #plain-mode:checked ~ label[for=plain-mode] > svg, .gallery-wrapper > #gallery-large:checked ~ label[for=gallery-large] > svg, .gallery-wrapper > #gallery-medium:checked ~ label[for=gallery-medium] > svg, .gallery-wrapper > #gallery-small:checked ~ label[for=gallery-small] > svg {
+    fill: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.gallery-wrapper > #gallery-large:checked ~ .gallery {
+    --gallery-scale: 1.0;
+    transition: 0.5s;
+}
+
+.gallery-wrapper > #gallery-medium:checked ~ .gallery {
+    --gallery-scale: 0.8;
+    transition: 0.5s;
+}
+
+.gallery-wrapper > #gallery-small:checked ~ .gallery {
+    --gallery-scale: 0.6;
+    transition: 0.5s;
+}
+
+.gallery-wrapper > input, .gallery-wrapper > .gallery > .background, .gallery-wrapper > .gallery > .slider > .photo > .bullets, .gallery-wrapper > .gallery > .slider > .photo > .prevNext {
+    display: none;
+}
+
+.gallery-wrapper > .gallery {
+    width: calc(var(--gallery-scale) * 100%);
+    padding-bottom: var(--gallery-margin);
+    padding-top: calc(2 * var(--gallery-margin));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-wrapper > #gallery-mode:checked ~ .gallery {
+    position: relative;
+    height: calc(var(--gallery-margin) + 100vh * var(--gallery-scale));
+    margin-top: calc(0px - var(--header-height));
+}
+
+.gallery-wrapper > #gallery-mode:checked ~ .gallery > .background {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh * var(--gallery-scale) - var(--header-height) - var(--gallery-margin) * 2);
+    bottom: var(--gallery-margin);
+    border-radius: calc(2 * var(--gallery-margin));
+    background: linear-gradient(to top, #111111 0%, #222222 100%);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    .gallery-wrapper > .control-background {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .gallery-wrapper > #gallery-mode:checked ~ .gallery > .background {
+        background: linear-gradient(to top, #080808 0%, #111111 100%);
+    }
+
+    .gallery-wrapper > label > svg {
+        fill: rgba(255, 255, 255, 0.3);
+        overflow: visible;
+    }
+
+    .gallery-wrapper > label[for$=mode], .gallery-wrapper > label[for^=gallery] {
+    }
+
+    .gallery-wrapper > label[for$=mode]:hover, .gallery-wrapper > label[for^=gallery]:hover, .gallery-wrapper > #thumbnail-mode:checked ~ label[for=thumbnail-mode], .gallery-wrapper > #gallery-mode:checked ~ label[for=gallery-mode], .gallery-wrapper > #plain-mode:checked ~ label[for=plain-mode], .gallery-wrapper > #gallery-large:checked ~ label[for=gallery-large], .gallery-wrapper > #gallery-medium:checked ~ label[for=gallery-medium], .gallery-wrapper > #gallery-small:checked ~ label[for=gallery-small] {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .gallery-wrapper > #thumbnail-mode:checked ~ label[for=thumbnail-mode] > svg, .gallery-wrapper > #gallery-mode:checked ~ label[for=gallery-mode] > svg, .gallery-wrapper > #plain-mode:checked ~ label[for=plain-mode] > svg, .gallery-wrapper > #gallery-large:checked ~ label[for=gallery-large] > svg, .gallery-wrapper > #gallery-medium:checked ~ label[for=gallery-medium] > svg, .gallery-wrapper > #gallery-small:checked ~ label[for=gallery-small] > svg {
+        fill: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.gallery > .slider {
+    display: flex;
+    margin: 0px;
+    width: 100%;
+    list-style-type: none;
+}
+
+.gallery-wrapper > #gallery-mode:checked ~ .gallery > .slider {
+    height: calc(100% - var(--header-height) - var(--gallery-margin) * 2 + var(--header-height));
+    position: absolute;
+    bottom: var(--gallery-margin);
+    transition: 0.6s;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    transition: 0.6s;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.gallery > .slider > .photo {
+    margin: var(--gallery-margin);
+}
+
+.gallery-wrapper > #gallery-mode:checked ~ .gallery > .slider > .photo {
+    height: 100%;
+    width: 100%;
+    padding: var(--gallery-margin);
+    padding-top: calc(var(--header-height) + 2 * var(--gallery-margin));
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: start;
+    justify-content: center;
+    position: relative;
+    bottom: calc(1 * var(--gallery-margin));
+}
+
+.gallery > .slider > .photo > img {
+    max-width: calc(100%);
+    border-radius: var(--gallery-margin);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-wrapper > #gallery-mode:checked ~ .gallery > .slider > .photo > img {
+    max-height: calc(100%);
+}
+
+.gallery > .slider > .photo > .photo-description {
+    text-align: center;
+}
+
+.gallery-wrapper > #gallery-mode:checked ~ .gallery > .slider > .photo > .photo-description {
+    color: #eee;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    position: absolute;
+    margin: var(--gallery-margin);
+    width: 80%;
+    top: calc(var(--header-height) + 2 * var(--gallery-margin));
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.gallery-wrapper > #gallery-mode:checked ~ .gallery > .slider > .photo > .prevNext {
+    display: block;
+    position: absolute;
+    z-index: 64;
+    
+    top: calc(var(--header-height) + 2 * var(--gallery-margin));
+    left: var(--gallery-margin);
+    right: var(--gallery-margin);
+}
+
+.gallery-wrapper > #gallery-mode:checked ~ .gallery > .slider > .photo > .prevNext > a {
+    border-radius: var(--gallery-margin);
+    color: #eee;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
+    position: absolute;
+    width: 10%;
+    min-width: 48px;
+    top: 0px;
+    padding: var(--gallery-margin);
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.gallery-wrapper #gallery-mode:checked ~ .gallery > .slider > .photo > .prevNext > a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px) saturate(80%);
+    -webkit-backdrop-filter: blur(6px) saturate(80%);
+}
+
+.gallery-wrapper #gallery-mode:checked ~ .gallery > .slider > .photo > .prevNext a + a {
+    right: 0px;
+}
+
+
+
+.gallery-wrapper #gallery-mode:checked ~ .gallery > .slider > .photo > .bullets {
+    list-style-type: none;
+    margin: 0px;
+    display: block;
+    position: absolute;
+    z-index: 32;
+    bottom: var(--gallery-margin);
+    padding: var(--gallery-margin) 0;
+    width: 100%;
+    text-align: center;
+}
+
+.gallery-wrapper #gallery-mode:checked ~ .gallery  .slider  .photo  .bullets li {
+    display: inline;
+}
+
+.gallery-wrapper #gallery-mode:checked ~ .gallery  .slider .bullets  a {
+    display: inline-block;
+    margin: 4px;
+    width: 16px;
+    height: 16px;
+    max-width: 3vmin;
+    max-height: 3vmin;
+    line-height: 20px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.gallery-wrapper #gallery-mode:checked ~ .gallery > .slider .bullets  a:hover {
+    background: #fff;
+}
+
+.gallery-wrapper #plain-mode:checked ~ .gallery > .slider {
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.gallery-wrapper #plain-mode:checked ~ .gallery .slider .photo {
+    padding: var(--gallery-margin);
+    flex-shrink: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.gallery-wrapper #plain-mode:checked ~ .gallery .slider .photo img {
+    max-height: calc(0.9 * calc(100vh - var(--header-height)));
+}
+
+.gallery-wrapper #plain-mode:checked ~ .gallery .slider .photo .photo-description {
+    margin: var(--gallery-margin);
+    width: 100%;
+}
+
+.gallery-wrapper #thumbnail-mode:checked ~ .gallery {
+    width: calc(100%);
+}
+
+.gallery-wrapper #thumbnail-mode:checked ~ .gallery .slider {
+    flex-wrap: wrap;
+    margin-top: 6px;
+    justify-content: center;
+}
+
+.gallery-wrapper #thumbnail-mode:checked ~ .gallery .slider .photo {
+    padding: 0px;
+    width: calc(40% * var(--gallery-scale));
+    text-align: center;
+}
+
+.gallery-wrapper #thumbnail-mode:checked ~ .gallery .slider .photo img {
+    max-height: calc(100% - 28px);
+}
+
+.gallery-wrapper #thumbnail-mode:checked ~ .gallery .slider .photo .photo-description {
+    margin: var(--gallery-margin);
+}
+
+@media only screen and (max-width: 600px) {
+    .gallery-wrapper #thumbnail-mode:checked ~ .gallery .slider .photo {
+        padding: 0px;
+        flex-grow: 1;
+        width: 34%;
+        height: auto;
+    }
+}
+
