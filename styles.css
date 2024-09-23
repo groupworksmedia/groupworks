@@ -1,25 +1,36 @@
+/*Favicon plugin*/
+.wrapper a[href^=http] {
+  padding-left: 19px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.wrapper a {
+  display: block;
+  margin: 10px;
+  text-decoration: none;
+}
+
 /* Font Declarations */
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab";
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 /* Root Variables */
 :root {
   --background-color: #000000;
@@ -33,8 +44,8 @@
   --error-color: #cf6679;
   --success-color: #66CDAA;
   --warning-color: #DAA520;
-  --font-main: 'Open Sans', sans-serif;
-  --font-headings: 'Roboto Slab', serif;
+  --font-main: "Open Sans", sans-serif;
+  --font-headings: "Roboto Slab", serif;
   --transition-speed: 0.3s;
 }
 
@@ -68,12 +79,29 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
 
 p {
   margin-bottom: 1rem;
@@ -95,7 +123,7 @@ a:focus {
 header {
   background-color: var(--surface-color);
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -134,7 +162,7 @@ nav a {
 }
 
 nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -169,14 +197,14 @@ main {
   border-radius: 8px;
   padding: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(255,255,255,0.1);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   border: 1px solid var(--surface-color);
 }
 
 .content:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(255,255,255,0.15);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
 }
 
 /* Item List */
@@ -189,13 +217,13 @@ main {
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
 .item-list > li:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(255,255,255,0.15);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
 }
 
 .item-list h1 {
@@ -333,10 +361,13 @@ select:focus {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 .fade-in {
   animation: fadeIn var(--transition-speed) ease-in;
 }
@@ -346,40 +377,32 @@ select:focus {
   body {
     font-size: 16px;
   }
-
   header .wrapper {
     flex-direction: column;
     align-items: flex-start;
   }
-
   nav {
     margin-top: 1rem;
     width: 100%;
   }
-
   nav ul {
     flex-direction: column;
   }
-
   nav li {
     margin-left: 0;
     margin-bottom: 0.5rem;
   }
-
   .all-tags li {
     font-size: 1rem;
   }
 }
-
 @media screen and (max-width: 480px) {
   body {
     font-size: 14px;
   }
-
   .wrapper {
     padding: 10px;
   }
-
   .wrapper img,
   .wrapper video {
     width: calc(100% + 20px); /* 10px margin on each side */
@@ -387,12 +410,16 @@ select:focus {
     margin-left: -10px;
     margin-right: -10px;
   }
-  
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
 }
-
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   :root {
@@ -405,12 +432,10 @@ select:focus {
     --link-color: #4169E1;
     --link-hover-color: #1E90FF;
   }
-
   body {
     background-color: var(--background-color);
     color: var(--text-color);
   }
-
   .content,
   .item-list > li,
   header,
@@ -418,21 +443,17 @@ select:focus {
     background-color: var(--surface-color);
     color: var(--text-color-secondary);
   }
-
   a, .button {
     color: var(--link-color);
   }
-
   a {
     text-decoration: underline;
   }
-
   .tag {
     background-color: var(--secondary-color);
     color: var(--text-color);
   }
 }
-
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -442,98 +463,75 @@ select:focus {
     scroll-behavior: auto !important;
   }
 }
-
 /* Print styles */
 @media print {
   body {
     background-color: #ffffff;
     color: #000000;
   }
-
   .wrapper {
     max-width: 100%;
   }
-
   header, nav, footer {
     display: none;
   }
-
   a {
     color: #000000;
     text-decoration: underline;
   }
-
   .item-list > li {
     page-break-inside: avoid;
   }
 }
-
-
 /*Author box is for displaying Authors md file*/
 .author-box {
-    width: 200px;
-    height: auto;
-    min-height: 200px;
-    border: 2px solid #333;
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #f0f0f0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 200px;
+  height: auto;
+  min-height: 200px;
+  border: 2px solid #333;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .author-box img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
 }
 
 .author-box h3 {
-    text-align: center;
-    margin: 0 0 10px;
+  text-align: center;
+  margin: 0 0 10px;
 }
 
 .author-box p {
-    font-size: 14px;
-    line-height: 1.4;
-    margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
 }
 
 /* Desktop styles */
 @media screen and (min-width: 768px) {
-    .author-box {
-        float: left;
-        margin: 0 20px 20px 0;
-    }
-
-    /* Clear the float to prevent layout issues */
-    .author-box::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  .author-box {
+    float: left;
+    margin: 0 20px 20px 0;
+  }
+  /* Clear the float to prevent layout issues */
+  .author-box::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
-
 /* Mobile styles */
 @media screen and (max-width: 767px) {
-    .author-box {
-        width: auto;
-        max-width: 100%;
-        margin: 20px 0;
-    }
-}
-
-/*Favicon plugin*/
-.wrapper a[href^="http"] {
-  padding-left: 19px;
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-.wrapper a  {
-  display: block;
-  margin: 10px;
-  text-decoration: none;
+  .author-box {
+    width: auto;
+    max-width: 100%;
+    margin: 20px 0;
+  }
 }
