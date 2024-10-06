@@ -199,7 +199,6 @@ main {
 
 .tag {
   background-color: var(--secondary-color);
-  color: var(--background-color);
   padding: 0.25rem 0.75rem;
   border-radius: 16px;
   font-size: 0.875rem;
@@ -439,6 +438,15 @@ select:focus {
     margin: 20px 0;
   }
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+
 .variant-0 {
   background-color: #66293c;
 }
